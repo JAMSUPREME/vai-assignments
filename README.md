@@ -2,14 +2,13 @@
 Assignments for Vai
 
 # Assignment 01
-
-todo - notes on first one
+Basic inheritance
 
 # Assignment 02
-todo - notes on first one
+is/as keywords and polymorphism stuff
 
 # Assignment 03
-todo - notes on first one
+LINQ basics
 
 # Assignment 04
 Basic web server maybe? (can show MVC and Web API)
