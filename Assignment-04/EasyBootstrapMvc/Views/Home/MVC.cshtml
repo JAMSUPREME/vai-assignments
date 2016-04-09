@@ -1,0 +1,121 @@
+﻿
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "MVC Basics";
+}
+
+<div class="col-lg-12">
+    <h1>MVC Basics!</h1>
+    <p>
+        Here are the goals of your MVC basics:
+        <ol>
+            <li>Making basic markup</li>
+            <li>Setting up routes</li>
+            <li>Once you can comfortably do the above items, we'll look into using Entity Framework to get data from a database!</li>
+        </ol>
+    </p>
+</div>
+
+<div class="col-lg-12">
+    <h1>Let's make a new page!</h1>
+    <p>
+        There are two important steps to creating a new page:
+        <ol>
+            <li>Make a new method in the controller</li>
+            <li>Make a View</li>
+        </ol>
+    </p>
+    <h2>Adding the new route</h2>
+    <p>
+        Let's add a new route "Cats" to our <code>HomeController</code>.
+        It should look like this:
+        <code>
+            public ActionResult Cats()
+            {
+            ViewBag.PageName = "Cats";
+            return View();
+            }
+        </code>
+    </p>
+    <h2>Making a view</h2>
+    <p>
+        Now you need to make a View (.cshtml) file!
+        <ol>
+            <li>Just right click on the "Home" folder and select "Add" then "View..."</li>
+            <li>Name the View "Cats" and use the "_Layout" file as the Layout, which will give us the shared header and other things</li>
+        </ol>
+        When you've done that, your View file should look empty except for this:
+        <code>
+            @@{
+            Layout = "_Layout.cshtml";
+            ViewBag.Title = "All about Cats";
+            }
+        </code>
+        You should add some text on the page about cats so you know which page you're on!
+    </p>
+    <h2>Updating the menu</h2>
+    <p>
+        It doesn't do much good to have a page if we can't get there.
+        Now we need to update the menu!
+        <ol>
+            <li>Open up <code>_Header.cshtml</code> and add a new menu item for your new cat page</li>
+        </ol>
+    </p>
+    <h2>All done!</h2>
+    <p>
+        Now we have a functioning page and you should be able to access it from the menu.
+    </p>
+    <hr />
+    <h1>Adding a special route</h1>
+    <p>
+        Until now we've ignored routes. If you look at <code>RouteConfig.cs</code> you'll see some code that sets up a default routing convention.
+        All URLs will match to <code>{controller}/{action}</code>.
+        Let's create a special route that will match to our new "Cats" view!
+        When I type in the URL <a href="/Home/Cats">http://localhost:65018/Cats</a> (the port, 65018 might be different on your local) it should go to the new Cats page!
+    </p>
+    <h1>Adding a special route in the controller itself!</h1>
+    <p>
+        With MVC5 you can specify routes on the controllers themselves!
+        You can see <a href="https://blogs.msdn.microsoft.com/webdev/2013/10/17/attribute-routing-in-asp-net-mvc-5/">this article</a> for more information.
+        <br />
+        Comment out the route you made in <code>RouteConfig.cs</code> and use attribute routing to accomplish the same thing.
+        <b>Hint:</b> Make sure you use the <code>[Route]</code> attribute, and your route should start with <code>~/</code> since it is a global route.
+    </p>
+    <hr />
+    <h1>Making a brand new controller</h1>
+    <p>
+        By now you're an expert in modifying the home controller and its routes, so now it is time to create a new controller!
+    </p>
+    <p>
+        Let's create a new <code>AwesomeController</code>!
+        <ul>
+            <li>Right click on the "Controllers" directory and "Add" then "Controller"</li>
+            <li>Select "Empty MVC 5 Controller"</li>
+            <li>Add an "Index" action (and a view for it)</li>
+            <li>Now you should be able to type in <a href="/Awesome/Index">http://localhost:65018/Awesome/Index</a> and reach your cool new page!</li>
+        </ul>
+    </p>
+    <hr />
+    <h1>Making some front-end controls!</h1>
+    <p>
+        Now you're a pro for making routes, setting up controllers, and basic markup. Now we'll actually create some useful inputs.
+        <br />
+        Here's a drop down:
+        @Html.DropDownList("ddlThings", (IEnumerable<SelectListItem>)ViewData["DropDownData"])
+
+        <br />
+
+        Here's an input:
+        @Html.TextBox("tbxCool", "", htmlAttributes: new { placeholder = "Type something cool" })
+    </p>
+    <p>
+        There are a whole bunch of methods available via <code>@@Html</code>. Just type <code>@@Html.</code> and hit <code>CTRL+SPACE</code> to see all of the options.
+        For now we're just using things like <code>DropDownList</code> but there are also methods like <code>DropDownListFor</code> which are useful when you build a page with a specific model (which we'll try out later)
+    </p>
+
+    <h1>That's it!</h1>
+    <p>
+        That's it for now!
+        Now try out the JQuery basics!
+    <p />
+</div>

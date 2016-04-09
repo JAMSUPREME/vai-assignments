@@ -1,0 +1,202 @@
+﻿
+@{
+    Layout = "_Layout.cshtml";
+    ViewBag.Title = "JQuery basics";
+}
+<style>
+    /*
+    * Base structure
+    */
+
+    /* Move down content because we have a fixed navbar that is 50px tall */
+    body {
+        padding-top: 50px;
+    }
+
+
+    /*
+    * Global add-ons
+    */
+
+    .sub-header {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #eee;
+    }
+
+    /*
+    * Top navigation
+    * Hide default border to remove 1px line.
+    */
+    .navbar-fixed-top {
+        border: 0;
+    }
+
+    /*
+    * Sidebar
+    */
+
+    /* Hide for mobile, show later */
+    .sidebar {
+        display: none;
+    }
+
+    @@media (min-width: 768px) {
+        .sidebar {
+            position: relative;
+            top: 51px;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+            display: inline-block;
+            padding: 20px;
+            overflow-x: hidden;
+            overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+            background-color: #f5f5f5;
+            border-right: 1px solid #eee;
+        }
+    }
+
+    /* Sidebar navigation */
+    .nav-sidebar {
+        margin-right: -21px; /* 20px padding + 1px border */
+        margin-bottom: 20px;
+        margin-left: -20px;
+    }
+
+        .nav-sidebar > li > a {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+
+        .nav-sidebar > .active > a,
+        .nav-sidebar > .active > a:hover,
+        .nav-sidebar > .active > a:focus {
+            color: #fff;
+            background-color: #428bca;
+        }
+
+
+    /*
+    * Main content
+    */
+
+    .main {
+        padding: 20px;
+    }
+
+    @@media (min-width: 768px) {
+        .main {
+            padding-right: 40px;
+            padding-left: 40px;
+        }
+    }
+
+    .main .page-header {
+        margin-top: 0;
+    }
+
+
+    /*
+    * Placeholder dashboard ideas
+    */
+
+    .placeholders {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+        .placeholders h4 {
+            margin-bottom: 0;
+        }
+
+    .placeholder {
+        margin-bottom: 20px;
+    }
+
+        .placeholder img {
+            display: inline-block;
+            border-radius: 50%;
+        }
+</style>
+
+<div class="col-lg-12">
+    <h1>JQuery Basics!</h1>
+    <p>
+        Here are the goals of the JQuery basics:
+        <ul>
+            <li>Learn how to select things with JQuery</li>
+            <li>Learn how to "bind" events to things in the UI</li>
+        </ul>
+        <br />
+        The <b>*most*</b> important thing is to figure out how to select things with JQuery. This makes searching for markup a whole lot easier!
+    </p>
+    <hr />
+    <h2>Selecting something easy</h2>
+    <p>
+        There are only a few really important selectors:
+        <ul>
+            <li><code>$('#id')</code></li>
+            <li><code>$('.css-class')</code></li>
+            <li><code>$('div')</code></li>
+            <li><code>$('#id > #direct-child')</code></li>
+            <li><code>$('#id #descendant-child')</code></li>
+        </ul>
+        <br />
+        And they can be combined together. For example: <code>$('#cool-text > div.css-class')</code>
+        <br />
+        Try doing all of these:
+        <ul>
+            <li>Select the div with ID <code>cool-text</code></li>
+            <li>Select the div with CSS class <code>css-class</code></li>
+            <li>Select all divs!</li>
+            <li>Select the div directly beneath the <code>cool-text</code> div without using a CSS selector</li>
+            <li>Select the grocery list (ol tag) beneath the <code>cool-text</code> div using the descendant syntax</li>
+        </ul>
+    </p>
+    <div class="panel panel-default">
+        <div class="panel-heading">Sample DOM for the assignment above</div>
+        <div class="panel-body">
+            <div id="cool-text">
+                This text is cool!
+                <div class="css-class">
+                    plz select me?
+                    <br />
+                    Here are some grocery items
+                    <ol>
+                        <li>Milk</li>
+                        <li>Sugar</li>
+                        <li>Cookies</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr />
+    <h2>Changing our navbar</h2>
+    <p>
+        todo: I'll add more later!
+    </p>
+</div>
+<div class="row">
+    <h1>Imagine this is a web site</h1>
+    <div class="col-lg-4">
+        <div class="col-lg-6">Half of 4 grids</div>
+        <div class="col-lg-6">Second half of 4 grids</div>
+    </div>
+    <div class="col-lg-8">
+        <div class="col-lg-6 alert alert-info">This takes up six spots (within 8)</div>
+        <div class="col-lg-6">
+            <div class="col-lg-9 alert alert-success">SELECT ME!</div>
+            <div class="col-lg-3 alert alert-warning">DON'T SELECT ME!</div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-2.2.3.js"></script>
+<script type="text/javascript">
+    $(function () {
+        // Here's where we'll be doing all of our JQuery stuff!
+
+
+
+    });
+</script>
