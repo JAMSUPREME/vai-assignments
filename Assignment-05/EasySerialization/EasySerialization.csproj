@@ -58,11 +58,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="assn_output.json" />
+    <None Include="manager.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="assn_output.xml" />
+    <Content Include="manager.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

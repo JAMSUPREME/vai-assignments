@@ -76,7 +76,7 @@ namespace EasySerialization
 
             // TODO: add attributes to the Employee & Manager classes
             // TODO: put your serialization code here
-            // TODO: make sure it matches the output in manager.xml and manager.json
+            // TODO: make sure it matches the output in manager.xml and manager.json (don't worry about whitespace, BUT ORDER IS IMPORTANT!)
 
 
             Console.Read();
