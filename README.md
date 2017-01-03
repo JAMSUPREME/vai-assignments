@@ -15,3 +15,11 @@ Basic web server maybe? (can show MVC and Web API)
 
 # Assignment 05
 Maybe selenium assignment for selecting items
+
+# Assignment 06
+
+Things that aren't clear yet:
+
+* Generics
+* Extension methods
+* Interfaces
