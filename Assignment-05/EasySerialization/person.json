@@ -1,8 +1,1 @@
-{
-    "Age": 50,
-    "Funds": "$5,708,342.00",
-    "Cat": {
-        "Age": 1,
-        "Name": "Fluffy"
-    }
-}
+{"Age":50,"Funds":"$5,708,342.00","Cat":{"Age":1,"Name":"Fluffy"}}

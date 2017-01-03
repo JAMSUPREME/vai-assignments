@@ -1,8 +1,1 @@
-<Person xmlns="http://schemas.datacontract.org/2004/07/EasySerialization" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-    <Age>50</Age>
-    <Cat>
-        <Age>1</Age>
-        <Name>Fluffy</Name>
-    </Cat>
-    <Funds>$5,708,342.00</Funds>
-</Person>
+<Person xmlns="http://schemas.datacontract.org/2004/07/EasySerialization" xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Age>50</Age><Cat><Age>1</Age><Name>Fluffy</Name></Cat><Funds>$5,708,342.00</Funds></Person>

@@ -17,6 +17,8 @@ namespace EasySerialization
         /// XML: https://msdn.microsoft.com/en-us/library/ms733127(v=vs.110).aspx
         /// 
         /// JSON: http://www.newtonsoft.com/json/help/html/Introduction.htm
+        /// 
+        /// Normally web frameworks will do all of these serialization for you. (We will see that in the next assignment)
         /// </summary>
         /// <param name="args"></param>
         static void Main(string[] args)
@@ -37,11 +39,7 @@ namespace EasySerialization
             //
 
             // Normally this explicit serialization will be done by the web framework for you
-            using (var fStream = File.Create(GetAppDir() + "\\person.xml"))
-            {
-                DataContractSerializer s = new DataContractSerializer(typeof(Person));
-                s.WriteObject(fStream, p);
-            }
+            WriteXml("person.xml", p);
 
             // You could also write the XML yourself if you needed to
             var xmlDoc = new XDocument(
@@ -64,18 +62,8 @@ namespace EasySerialization
             //
             // Using JSON
             //
-
-            using (var fStream = File.Create(GetAppDir() + "\\person.json"))
-            {
-                using (StreamWriter sw = new StreamWriter(fStream))
-                {
-                    using (JsonWriter jw = new JsonTextWriter(sw))
-                    {
-                        JsonSerializer serializer = new JsonSerializer();
-                        serializer.Serialize(jw, p);
-                    }
-                }
-            }
+            WriteJson("person.json",p);
+            
 
             //
             //
@@ -131,6 +119,30 @@ namespace EasySerialization
                     },
                 }
             };
+        }
+
+        static void WriteXml(string fileName, object o)
+        {
+            using (var fStream = File.Create(GetAppDir() + "\\" + fileName))
+            {
+                DataContractSerializer s = new DataContractSerializer(o.GetType());
+                s.WriteObject(fStream, o);
+            }
+        }
+
+        static void WriteJson(string fileName, object o)
+        {
+            using (var fStream = File.Create(GetAppDir() + "\\" + fileName))
+            {
+                using (StreamWriter sw = new StreamWriter(fStream))
+                {
+                    using (JsonWriter jw = new JsonTextWriter(sw))
+                    {
+                        JsonSerializer serializer = new JsonSerializer();
+                        serializer.Serialize(jw, o);
+                    }
+                }
+            }
         }
     }
 }

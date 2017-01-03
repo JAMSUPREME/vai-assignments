@@ -160,6 +160,7 @@ ClientBin/
 *.publishsettings
 node_modules/
 .vs
+packages
 
 # RIA/Silverlight projects
 Generated_Code/
