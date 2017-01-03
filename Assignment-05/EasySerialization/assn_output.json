@@ -1,1 +1,17 @@
-﻿
+{
+    "Age": 55,
+    "Glorious Title": "Gerald",
+    "Salary": "$999,000.00",
+    "Servants": [
+        {
+            "Age": 40,
+            "Name": "Jim",
+            "Salary": "$55,000.00"
+        },
+        {
+            "Age": 40,
+            "Name": "Grunt",
+            "Salary": "$55,000.00"
+        }
+    ]
+}

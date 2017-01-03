@@ -1,1 +1,17 @@
-﻿
+<Manager xmlns="http://schemas.datacontract.org/2004/07/EasySerialization.Todo" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <Age>55</Age>
+    <Name>Gerald</Name>
+    <Salary>$999,000.00</Salary>
+    <FaithfulServants>
+        <Employee>
+            <Age>40</Age>
+            <Name>Jim</Name>
+            <Salary>$55,000.00</Salary>
+        </Employee>
+        <Employee>
+            <Age>40</Age>
+            <Name>Grunt</Name>
+            <Salary>$55,000.00</Salary>
+        </Employee>
+    </FaithfulServants>
+</Manager>
