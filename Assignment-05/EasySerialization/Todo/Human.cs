@@ -2,8 +2,8 @@
 {
     public class Human
     {
-        public int Age { get; set; }
+        public virtual int Age { get; set; }
 
-        public string Name { get; set; }
+        public virtual string Name { get; set; }
     }
 }

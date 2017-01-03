@@ -4,6 +4,6 @@
     {
         public double Salary { get; set; }
 
-        public string SalaryDisplay { get { return Salary.ToString("C"); } set { } }
+        public virtual string SalaryDisplay { get { return Salary.ToString("C"); } set { } }
     }
 }
