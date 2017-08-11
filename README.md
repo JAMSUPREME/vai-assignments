@@ -14,9 +14,16 @@ LINQ basics
 Basic web server maybe? (can show MVC and Web API)
 
 # Assignment 05
-Maybe selenium assignment for selecting items
+Serialization basics (for both XML and JSON)
 
 # Assignment 06
+Various tiers of testing and "code quality":
+- Unit tests
+- Acceptance tests
+- Integration tests
+- Code coverage
+
+# Assignment X
 
 Things that aren't clear yet:
 
